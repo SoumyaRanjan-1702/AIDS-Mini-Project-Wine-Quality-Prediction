@@ -15,7 +15,7 @@ def predict_wine_quality(input_data):
 # Define the app
 def app():
     # Set the page title
-    st.title('Wine Quality Prediction App')
+    st.title('Wine Quality Predictor')
     # st.set_page_config(page_title="Wine Quality Prediction App", page_icon=":wine_glass:", layout="wide", initial_sidebar_state="expanded")
 
 
@@ -58,12 +58,6 @@ def app():
     
     input_data = pd.DataFrame([input_data], columns=feature_names)
     prediction = predict_wine_quality(input_data)
-
-    # Show the prediction
-    # if (prediction == 1):
-    #     st.write('Good Quality Wine')
-    # else:
-    #     st.write('Bad Quality Wine')
 
     if (prediction == 1):
         st.write('<p style="text-align:center">Good Quality Wine</p>', unsafe_allow_html=True)
